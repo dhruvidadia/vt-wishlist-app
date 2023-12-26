@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.sqlite"
+}
+
+model Session {
+  id          String    @id
+  shop        String
+  state       String
+  isOnline    Boolean   @default(false)
+  scope       String?
+  expires     DateTime?
+  accessToken String
+  userId      BigInt?
+}
+
+model VTShop {
+  id        Int    @id @default(autoincrement())
+  host      String 
+  shopId    String @unique
+  name      String
+  plan      String
+  status    Boolean
+  accessToken String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model VTProducts {
+  id          Int    @id @default(autoincrement())
+  shopId      String     
+  productId   String
+  variantId   String
+  handle      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model VTCollection {
+  id    Int      @id @default(autoincrement())
+  title String
+  vtwishlist   VTWishlist[]
+}
+
+model VTWishlist {
+  id            Int    @id @default(autoincrement())
+  shopId        String
+  customerId    BigInt
+  collectionId  Int 
+  collection    VTCollection  @relation(fields: [collectionId], references: [id])
+  products      String
+  createdAt     DateTime @default(now()) 
+  updatedAt     DateTime @updatedAt
+}
