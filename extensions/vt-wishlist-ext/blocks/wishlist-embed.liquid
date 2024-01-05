@@ -1,0 +1,9 @@
+<script id="wishlistcommonscript" src="{{ 'vt-wishlist.js' | asset_url }}" data-shopDomain="{{shop.domain}}" data-customerId="{% if customer %}{{ customer.id }}{% endif %}" data-shopId="{{shop.id}}" async></script>
+
+{% schema %}
+    {
+      "name": "VT Wishlist Enable",
+      "target": "head",
+      "settings": []
+    }
+    {% endschema %}

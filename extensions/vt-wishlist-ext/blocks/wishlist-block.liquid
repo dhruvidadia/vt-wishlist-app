@@ -1,0 +1,37 @@
+<div class="vt-wishlist-container">
+  <div class="add-wishlist" data-product="{{ block.settings.product.id }}" data-variant="{{ block.settings.product.selected_or_first_available_variant.id }}" data-product-url="{{ block.settings.product.handle }}">
+  {% render 'icon-heart', icon: 'empty' %} <span>{% if block.settings.add-button-text %}{{block.settings.add-button-text}}{%- else -%}
+    Add to Wishlist {% endif %}</span>
+  </div>
+  <div class="remove-wishlist" style="display:none;" data-product="{{ block.settings.product.id }}" data-variant="{{ block.settings.product.selected_or_first_available_variant.id }}" data-product-url="{{ block.settings.product.handle }}">
+  {% render 'icon-heart', icon: 'filled' %} <span>{% if block.settings.remove-button-text %}{{block.settings.remove-button-text}}{%- else -%}Remove from Wishlist{% endif %}</span>
+  </div>
+</div>
+
+  <script id="wishlistproductscript" src="{{ 'vt-wishlist-product.js' | asset_url }}" data-productId="{{ block.settings.product.id }}" data-variantId="{{ block.settings.product.selected_or_first_available_variant.id }}" data-productHandle="{{ block.settings.product.handle }}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "VT Wishlist Button",
+    "target": "section",
+    "stylesheet": "vt-wishlist-product.css",
+    "templates": ["product"],
+    "settings": [
+        { "type": "product", "id": "product", "label": "product", "autofill": true },
+        {
+          "type": "text",
+          "id": "add-button-text",
+          "label": "Add to Wishlist button text",
+          "default": "Add to Wishlist",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "remove-button-text",
+          "label": "Remove from Wishlist",
+          "default": "Remove from Wishlist",
+          "info": "Optional"
+        }
+    ]
+  }
+{% endschema %}

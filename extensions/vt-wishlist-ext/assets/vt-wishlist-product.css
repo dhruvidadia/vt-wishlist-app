@@ -1,0 +1,9 @@
+.vt-wishlist-container .add-wishlist, .vt-wishlist-container .remove-wishlist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+.vt-wishlist-container .add-wishlist span, .vt-wishlist-container .remove-wishlist span{
+    padding-left:10px;
+}

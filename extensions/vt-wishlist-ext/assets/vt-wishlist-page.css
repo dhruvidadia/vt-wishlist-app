@@ -1,0 +1,66 @@
+vt-wishlist-page .compare-at-price{
+    text-decoration: line-through;
+}
+vt-wishlist-page .product-details {
+    padding: 10px;
+    max-width: 100%;
+}
+vt-wishlist-page select.variantoptions {
+    max-width: 100%;
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #fff;
+}
+vt-wishlist-page .spinner{
+    max-width:100px;
+}
+vt-wishlist-page {
+	text-align: center;
+}
+vt-wishlist-page .vendor {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+vt-wishlist-page .product-title {
+	font-weight: bold;
+	font-size: 18px;
+}
+vt-wishlist-page .wishlist-loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+vt-wishlist-page  .product-grid_item {
+    position: relative;
+}
+vt-wishlist-page .remove-wishlist {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    z-index: 2;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+vt-wishlist-page .remove-wishlist svg {
+    width: 20px;
+    height: 20px;
+}
+
+vt-wishlist-page .loading-overlay__spinner {
+    position: absolute;
+    z-index: 1;
+    width: 1.8rem;
+    background: #fff;
+}

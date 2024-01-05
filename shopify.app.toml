@@ -2,26 +2,26 @@
 
 name = "vt-wishlist-app"
 client_id = "46d60d2e35f97b8bd4fd586a44edc30d"
-application_url = "https://reducing-crossing-coaches-rack.trycloudflare.com"
+application_url = "https://berkeley-grow-invisible-herald.trycloudflare.com"
 embedded = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "write_products,read_themes"
 
 [auth]
 redirect_urls = [
-  "https://reducing-crossing-coaches-rack.trycloudflare.com/auth/callback",
-  "https://reducing-crossing-coaches-rack.trycloudflare.com/auth/shopify/callback",
-  "https://reducing-crossing-coaches-rack.trycloudflare.com/api/auth/callback"
+  "https://berkeley-grow-invisible-herald.trycloudflare.com/auth/callback",
+  "https://berkeley-grow-invisible-herald.trycloudflare.com/auth/shopify/callback",
+  "https://berkeley-grow-invisible-herald.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
 api_version = "2023-10"
 
 [app_proxy]
-url = "https://reducing-crossing-coaches-rack.trycloudflare.com"
-subpath = "wishlist"
+url = "https://berkeley-grow-invisible-herald.trycloudflare.com"
+subpath = "wish"
 prefix = "apps"
 
 [pos]
